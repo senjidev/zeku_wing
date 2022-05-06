@@ -1,3 +1,11 @@
+"""
+#
+	a platformer game lol
+	developed by:
+		zeku += black wing
+#
+"""
+
 from pygame.locals import *
 import pygame as pg, sys
 
