@@ -4,7 +4,7 @@ from sprite import Sprite
 class Player(Sprite):
 	def __init__(self, startx, starty):
 		super().__init__("player/zeku.png",startx,starty)
-		self.speed = 4
+		self.speed = 2
 		self.idle = self.image
 
 	def update(self):

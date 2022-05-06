@@ -5,7 +5,8 @@ class Sprite(pg.sprite.Sprite):
       super().__init__()
       self.image = pg.image.load(image)
       self.rect = self.image.get_rect()
-      self.rect.center = [startx, starty]
+      self.center = [startx, starty]
+      self.rect.center = self.center
 
    def update(self):
       pass
