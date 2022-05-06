@@ -1,4 +1,9 @@
-***GAME EVENT HANDLER***
-***PLAYER EVENT HANDLER***
-***JUMPING***
-***PARALAX***
+- we could implement these sooner than later :) -
+*** BUGS IN PLAYER x FLOOR COLLISIONS (JUMP AROUND AND SOMETIMES SINK INTO FLOOR) 
+   PROBABLY AN ISSUE WITH Player.check_collision() OR MAYBE IN tile.py ***
+*** ADD A 2x and 3x GAME RENDER SCALING OPTION ***
+
+
+- not too important rn -
+*** BASIC PLAY BUTTON "START" MENU SCENE ***
+*** PARALAX ***
