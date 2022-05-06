@@ -7,3 +7,4 @@
 - not too important rn -
 *** BASIC PLAY BUTTON "START" MENU SCENE ***
 *** PARALAX ***
+*** HAVE THE PLAYER FACE THE MOUSE DIR ***
