@@ -26,7 +26,7 @@ class Game():
 		self.run()
 	def run(self):
 		#create player
-		player = Player(100,200)
+		player = Player(100,20)
 		tiles = pg.sprite.Group()
 		#draw tiles
 		for t in range(0,400,16):
@@ -35,9 +35,9 @@ class Game():
 		while self.running:
 			self.event_handler()
 			pg.event.pump()
-			player.update()
 			self.screen.fill(self.bg)
 			player.draw(self.screen)
+			player.update(tiles)
 			tiles.draw(self.screen)
 			pg.display.flip()
 			self.clock.tick(self.FPS)
