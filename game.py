@@ -23,9 +23,9 @@ class Game():
 		#draw tiles
 		for t in range(0,400,16):
 			tiles.add(Tile(t,300))
-			
 		#game loop
 		while self.running:
+			self.event_handler()
 			pg.event.pump()
 			player.update()
 			self.screen.fill(self.bg)
@@ -33,7 +33,13 @@ class Game():
 			tiles.draw(self.screen)
 			pg.display.flip()
 			self.clock.tick(self.FPS)
-
-			
+	#event handler
+	def event_handler(self):
+		super().__init__()
+		for event in pg.event.get():
+			if event.type == QUIT:
+				print(f"GAME CLOSED")
+				self.running = False
+				sys.exit()
 if __name__ == "__main__":
 	Game()
