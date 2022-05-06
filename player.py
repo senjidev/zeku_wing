@@ -29,6 +29,10 @@ class Player(Sprite):
 			self.facing_left = False
 			self.walk_animation()
 			hsp = self.speed
+		#respawn
+		if self.rect.y > 500:
+			self.rect.y = 20
+			self.rect.x = 100
 		#jump key
 		if key[pg.K_SPACE] and onground:
 			self.vsp = -self.jumpspeed
