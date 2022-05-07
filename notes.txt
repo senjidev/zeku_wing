@@ -1,7 +1,14 @@
-- we could implement these sooner than later :) -
+DO NOW
 *** BUGS IN PLAYER x FLOOR COLLISIONS (JUMP AROUND AND SOMETIMES SINK INTO FLOOR) 
    PROBABLY AN ISSUE WITH Player.check_collision() OR MAYBE IN tile.py ***
+*** UPDATE SPRITE CLASS ***
+
+
+- we could implement these sooner than later :) -
 *** ADD A 2x and 3x GAME RENDER SCALING OPTION ***
+*** TILE RECT HANDLING ***
+*** MOVEMENT SYSTEM INDEPENDENT OF BUILTIN ***
+
 
 
 - not too important rn -
