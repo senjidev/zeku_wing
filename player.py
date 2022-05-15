@@ -35,20 +35,20 @@ class Player(Sprite):
         onground = self.check_collision(0, 1, boxes)
         # check keys
         key = pg.key.get_pressed()
-        if key[pg.K_LEFT]:
+        if key[pg.K_a]:
             self.facing_left = True
             self.walk_animation()
             hsp = -self.speed
-        if key[pg.K_RIGHT]:
+        if key[pg.K_d]:
             self.facing_left = False
             self.walk_animation()
             hsp = self.speed
 
-        if key[pg.K_UP] and onground:
+        if key[pg.K_SPACE] and onground:
             self.vsp = -self.jumpspeed
 
         # variable height jumping
-        if self.prev_key[pg.K_UP] and not key[pg.K_UP]:
+        if self.prev_key[pg.K_SPACE] and not key[pg.K_SPACE]:
             if self.vsp < -self.min_jumpspeed:
                 self.vsp = -self.min_jumpspeed
 
