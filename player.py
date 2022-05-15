@@ -1,5 +1,6 @@
 import pygame as pg, numpy
 from sprite import Sprite
+import time as t
 class Player(Sprite):
     def __init__(self, startx, starty):
         super().__init__("player/zeku.png", startx, starty)
@@ -11,6 +12,7 @@ class Player(Sprite):
         self.speed = 4
         self.jumpspeed = 20
         self.vsp = 0
+        self.spawn = [startx, starty]
         self.gravity = 1
         self.min_jumpspeed = 4
         self.prev_key = pg.key.get_pressed()
@@ -33,7 +35,13 @@ class Player(Sprite):
     def update(self, boxes):
         hsp = 0
         onground = self.check_collision(0, 1, boxes)
-        # check keys
+        # check player events
+        #respawn
+        if self.rect.y > self.spawn[1] + 1000:
+            t.sleep(1)
+            self.rect.x = self.spawn[0]
+            self.rect.y = self.spawn[1]
+
         key = pg.key.get_pressed()
         if key[pg.K_a]:
             self.facing_left = True

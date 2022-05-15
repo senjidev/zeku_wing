@@ -16,8 +16,8 @@ class Game():
 		super().__init__()
 		pg.init()
 		self.running = True
-		self.WIDTH = 400
-		self.HEIGHT = 300
+		self.WIDTH = 1000
+		self.HEIGHT = 800
 		self.FPS = 60
 		self.bg = (0, 0, 0)
 		self.screen = pg.display.set_mode((self.WIDTH, self.HEIGHT))
@@ -28,8 +28,8 @@ class Game():
 		player = Player(100,20)
 		tiles = pg.sprite.Group()
 		#draw tiles
-		for t in range(0,400,16):
-			tiles.add(Box(t,300))
+		for t in range(0,self.WIDTH,16):
+			tiles.add(Box(t,self.HEIGHT))
 		#game loop
 		while self.running:
 			self.event_handler()
